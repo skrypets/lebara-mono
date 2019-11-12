@@ -7,7 +7,7 @@
     "nx": "nx",
     "start": "npm run rename:aws:config || ng serve; ng serve",
     "build": "npm run rename:aws:config || ng build --prod; ng build --prod",
-    "rename:aws:config": "cd libs/appsync/src/lib && [ -f aws-exports.js ] && mv aws-exports.js aws-exports.ts || true",
+    "rename:aws:config": "cd libs/aws-amplify/src/lib && [ -f aws-exports.js ] && mv aws-exports.js aws-exports.ts || true",
     "test": "ng test",
     "lint": "nx workspace-lint && ng lint",
     "e2e": "ng e2e",
