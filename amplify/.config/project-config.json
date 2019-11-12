@@ -1,0 +1,17 @@
+{
+    "projectName": "lebara-mono",
+    "version": "2.0",
+    "frontend": "javascript",
+    "javascript": {
+        "framework": "angular",
+        "config": {
+            "SourceDir": "src",
+            "DistributionDir": "dist",
+            "BuildCommand": "ng build lb-ses --prod",
+            "StartCommand": "ng serve lb-ses"
+        }
+    },
+    "providers": [
+        "awscloudformation"
+    ]
+}

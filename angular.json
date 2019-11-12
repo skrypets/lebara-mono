@@ -27,6 +27,9 @@
           },
           "configurations": {
             "production": {
+              "customWebPackConfig": {
+                "path": "apps/lb-ses/webpack.config.js"
+              },
               "fileReplacements": [
                 {
                   "replace": "apps/lb-ses/src/environments/environment.ts",

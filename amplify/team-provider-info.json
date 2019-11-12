@@ -1,0 +1,14 @@
+{
+    "staging": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-lebara-mono-staging-193702-authRole",
+            "UnauthRoleArn": "arn:aws:iam::832256565147:role/amplify-lebara-mono-staging-193702-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::832256565147:role/amplify-lebara-mono-staging-193702-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "amplify-lebara-mono-staging-193702-deployment",
+            "UnauthRoleName": "amplify-lebara-mono-staging-193702-unauthRole",
+            "StackName": "amplify-lebara-mono-staging-193702",
+            "StackId": "arn:aws:cloudformation:eu-west-1:832256565147:stack/amplify-lebara-mono-staging-193702/09a3f760-0573-11ea-800d-022b3a528618"
+        }
+    }
+}
