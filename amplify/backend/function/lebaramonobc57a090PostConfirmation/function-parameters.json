@@ -1,0 +1,14 @@
+{
+    "trigger": true,
+    "modules": [
+        "add-to-group"
+    ],
+    "parentResource": "lebaramonobc57a090",
+    "functionName": "lebaramonobc57a090PostConfirmation",
+    "parentStack": "auth",
+    "triggerEnvs": "[]",
+    "triggerTemplate": "PostConfirmation.json.ejs",
+    "roleName": "lebaramonobc57a090PostConfirmation",
+    "skipEdit": true,
+    "resourceName": "lebaramonobc57a090PostConfirmation"
+}

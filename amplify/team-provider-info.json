@@ -9,6 +9,21 @@
             "UnauthRoleName": "amplify-lebara-mono-staging-193702-unauthRole",
             "StackName": "amplify-lebara-mono-staging-193702",
             "StackId": "arn:aws:cloudformation:eu-west-1:832256565147:stack/amplify-lebara-mono-staging-193702/09a3f760-0573-11ea-800d-022b3a528618"
+        },
+        "categories": {
+            "function": {
+                "lebaramonobc57a090CustomMessage": {
+                    "REDIRECTURL": "https://master.d3m39yhgo2q7aj.amplifyapp.com/register-confirmation",
+                    "EMAILSUBJECT": "email confirmation",
+                    "EMAILMESSAGE": "Please confirm your account"
+                },
+                "lebaramonobc57a090PostConfirmation": {
+                    "GROUP": "lb-ses"
+                }
+            },
+            "auth": {
+                "lebaramonobc57a090": {}
+            }
         }
     }
 }

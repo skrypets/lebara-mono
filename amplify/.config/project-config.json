@@ -1,17 +1,15 @@
 {
-    "projectName": "lebara-mono",
-    "version": "2.0",
-    "frontend": "javascript",
-    "javascript": {
-        "framework": "angular",
-        "config": {
-            "SourceDir": "src",
-            "DistributionDir": "dist",
-            "BuildCommand": "ng build lb-ses --prod",
-            "StartCommand": "ng serve lb-ses"
-        }
-    },
-    "providers": [
-        "awscloudformation"
-    ]
+  "projectName": "lebara-mono",
+  "version": "2.0",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "angular",
+    "config": {
+      "SourceDir": "libs/aws-amplify/src/lib",
+      "DistributionDir": "dist/apps/lb-ses",
+      "BuildCommand": "ng build lb-ses --prod",
+      "StartCommand": "ng serve lb-ses"
+    }
+  },
+  "providers": ["awscloudformation"]
 }

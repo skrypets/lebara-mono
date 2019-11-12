@@ -1,0 +1,14 @@
+{
+    "trigger": true,
+    "modules": [
+        "verification-link"
+    ],
+    "parentResource": "lebaramonobc57a090",
+    "functionName": "lebaramonobc57a090CustomMessage",
+    "parentStack": "auth",
+    "triggerEnvs": "[{\"key\":\"RESOURCENAME\",\"value\":\"resourceName\"}]",
+    "triggerTemplate": "CustomMessage.json.ejs",
+    "roleName": "lebaramonobc57a090CustomMessage",
+    "skipEdit": true,
+    "resourceName": "lebaramonobc57a090CustomMessage"
+}

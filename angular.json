@@ -27,9 +27,6 @@
           },
           "configurations": {
             "production": {
-              "customWebPackConfig": {
-                "path": "apps/lb-ses/webpack.config.js"
-              },
               "fileReplacements": [
                 {
                   "replace": "apps/lb-ses/src/environments/environment.ts",
@@ -121,6 +118,37 @@
             "tsConfig": ["apps/lb-ses-e2e/tsconfig.e2e.json"],
             "exclude": ["**/node_modules/**", "!apps/lb-ses-e2e/**"]
           }
+        }
+      }
+    },
+    "aws-amplify": {
+      "projectType": "library",
+      "root": "libs/aws-amplify",
+      "sourceRoot": "libs/aws-amplify/src",
+      "prefix": "lebara-mono",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/aws-amplify/tsconfig.lib.json",
+              "libs/aws-amplify/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/aws-amplify/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/aws-amplify/jest.config.js",
+            "tsConfig": "libs/aws-amplify/tsconfig.spec.json",
+            "setupFile": "libs/aws-amplify/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
         }
       }
     }

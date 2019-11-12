@@ -13,6 +13,9 @@
     },
     "lb-ses": {
       "tags": []
+    },
+    "aws-amplify": {
+      "tags": []
     }
   }
 }

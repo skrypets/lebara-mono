@@ -15,7 +15,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@lebara-mono/aws-amplify": ["libs/aws-amplify/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
