@@ -30,9 +30,11 @@
 /coverage
 /libpeerconnection.log
 npm-debug.log
+package-lock.json
 yarn-error.log
 testem.log
 /typings
+
 
 # System Files
 .DS_Store
