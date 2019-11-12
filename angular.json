@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "projects": {
+    "lb-ses": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/lb-ses",
+      "sourceRoot": "apps/lb-ses/src",
+      "prefix": "lebara-mono",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/lb-ses",
+            "index": "apps/lb-ses/src/index.html",
+            "main": "apps/lb-ses/src/main.ts",
+            "polyfills": "apps/lb-ses/src/polyfills.ts",
+            "tsConfig": "apps/lb-ses/tsconfig.app.json",
+            "aot": false,
+            "assets": ["apps/lb-ses/src/favicon.ico", "apps/lb-ses/src/assets"],
+            "styles": ["apps/lb-ses/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/lb-ses/src/environments/environment.ts",
+                  "with": "apps/lb-ses/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "lb-ses:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "lb-ses:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "lb-ses:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/lb-ses/tsconfig.app.json",
+              "apps/lb-ses/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/lb-ses/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/lb-ses/jest.config.js",
+            "tsConfig": "apps/lb-ses/tsconfig.spec.json",
+            "setupFile": "apps/lb-ses/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "lb-ses-e2e": {
+      "root": "apps/lb-ses-e2e",
+      "sourceRoot": "apps/lb-ses-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/lb-ses-e2e/cypress.json",
+            "tsConfig": "apps/lb-ses-e2e/tsconfig.e2e.json",
+            "devServerTarget": "lb-ses:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "lb-ses:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/lb-ses-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/lb-ses-e2e/**"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "lb-ses"
+}
