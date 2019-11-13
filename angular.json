@@ -21,8 +21,14 @@
             "polyfills": "apps/lb-ses/src/polyfills.ts",
             "tsConfig": "apps/lb-ses/tsconfig.app.json",
             "aot": false,
-            "assets": ["apps/lb-ses/src/favicon.ico", "apps/lb-ses/src/assets"],
-            "styles": ["apps/lb-ses/src/styles.scss"],
+            "assets": [
+              "apps/lb-ses/src/favicon.ico",
+              "apps/lb-ses/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "apps/lb-ses/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -81,7 +87,10 @@
               "apps/lb-ses/tsconfig.app.json",
               "apps/lb-ses/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/lb-ses/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/lb-ses/**"
+            ]
           }
         },
         "test": {
@@ -115,8 +124,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/lb-ses-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/lb-ses-e2e/**"]
+            "tsConfig": [
+              "apps/lb-ses-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/lb-ses-e2e/**"
+            ]
           }
         }
       }
@@ -134,7 +148,10 @@
               "libs/aws-amplify/tsconfig.lib.json",
               "libs/aws-amplify/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/aws-amplify/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/aws-amplify/**"
+            ]
           }
         },
         "test": {
