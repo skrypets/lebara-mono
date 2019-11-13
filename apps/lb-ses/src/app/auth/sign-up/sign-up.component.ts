@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatBottomSheet } from '@angular/material';
 import { AuthService } from '../auth.service';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../../environments/environment';
 import { Router } from '@angular/router';
 
 @Component({
@@ -19,8 +19,6 @@ export class SignUpComponent implements OnInit {
     lname: new FormControl('', [Validators.min(2)])
   });
 
-  countryCode = '+1';
-
   get emailInput() {
     return this.signupForm.get('email');
   }
@@ -32,9 +30,6 @@ export class SignUpComponent implements OnInit {
   }
   get lnameInput() {
     return this.signupForm.get('lname');
-  }
-  get phoneInput() {
-    return this.signupForm.get('phone');
   }
 
   constructor(

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormControl } from '@angular/forms';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../../environments/environment';
 import { Router } from '@angular/router';
 import Auth from '@aws-amplify/auth';
-import { NotificationService } from 'src/app/services/notification.service';
+import { NotificationService } from '../../services/notification.service';
 
 @Component({
   selector: 'lebara-mono-confirm-code',
